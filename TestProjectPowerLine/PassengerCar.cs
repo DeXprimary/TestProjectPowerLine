@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestProjectPowerLine
 {
-    public class PassengerCar : CommonCar
+    public class PassengerCar : CommonCar, ITransportCar
     {
         public int MaxPassengers { get; private set; }
 
@@ -32,7 +32,7 @@ namespace TestProjectPowerLine
         }
 
         // Возвращает запас хода с учётом числа пассажиров
-        public override float GetMaxDistanceConsideringCargo(float currentVolumeFuel)
+        public float GetMaxDistanceConsideringCargo(float currentVolumeFuel)
         {
             return currentVolumeFuel / AvarageFuelConsumption * 100 * (1 - 0.06f * curPassengers);
         }
