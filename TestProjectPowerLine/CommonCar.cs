@@ -38,10 +38,7 @@ namespace TestProjectPowerLine
         {
             return GetMaxDistance(FuelTankCapacity);
         }
-
-        // Метод возвращает запас хода авто с учётом текущего груза.
-        
-
+                
         // Метод возвращает за какое время автомобиль преодолеет указанное растояние, если хватит топлива.
         public abstract float TryGetTimeDriven(float currentVolumeFuel, float distance);
 
